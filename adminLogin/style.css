@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.desktop {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background: linear-gradient(179.8deg, #7260ff, #3e398f);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;  /* Changed from 'start' to 'center' */
+}
+
+.navbar{
+    width: 80%;
+    height: 80px;
+    background-color: #E2E2E2;
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: auto; 
+}
+
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; 
+}
+
+.login{
+    display: flex;
+    margin-right: 20px;
+    gap: 10px;  /* Added gap between buttons */
+}
+
+.btn {
+    margin: 5px;
+    padding: 8px 30px;    /* Increased horizontal padding */
+    min-width: 120px;    /* Added minimum width */
+    font-size: 14px;     /* Increased font size */
+    border-radius: 25px;  /* Added rounded corners */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);  /* Added subtle hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mainContainer {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;  /* Reduced left padding */
+    padding-right: 0;    /* Remove right padding */
+}
+
+.mainContainer img {
+    width: 600px;  /* Increased from 500px */
+    height: 600px;  /* Increased from 500px */
+    object-fit: contain;
+}
+
+.loginForm {
+    width: 70%;  /* Increased from 60% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 120px 0 0 120px;
+    background-color: #f1f1f1;
+    height: 600px;  /* Increased from 514px */
+    padding: 80px;  /* Increased padding for more internal space */
+    gap: 10px;  /* Add gap between elements */
+}
+
+.loginForm img {
+    width: 50px;  /* Reduced logo size */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 10px;  /* Space between logo and heading */
+}
+
+.loginForm h1 {
+    font-size: 37px;  /* Adjust heading size */
+}
+
+.inputFeilds {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;  /* Increased gap between left and right sections */
+    width: 100%;
+    margin-top: 20px;  /* Increased top margin */
+}
+
+.inputFeilds input {
+    width: 100%;
+    height: 50px;  /* Increased input height */
+    border-radius: 15px;
+    background-color: #fff;
+    border: none;
+    padding: 0 25px;  /* Increased input padding */
+    font-size: 16px;  /* Increased font size */
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;  /* Increased gap between form elements */
+    width: 48%;  /* Slightly increased width of columns */
+}
+
+.gender {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.gender input[type="radio"] {
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+
+.slider {
+    position: absolute;
+    height: 45px;  /* Increased height */
+    width: 300px;  /* Increased width */
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    border-radius: 30px;  /* Increased border radius */
+    gap: 20px;  /* Increased gap between buttons */
+    padding: 0 12px;  /* Increased padding */
+}
+
+.slider button {
+    padding: 8px 20px;  /* Increased padding */
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 25px;  /* Increased border radius */
+    cursor: pointer;
+    font-size: 15px;  /* Increased font size */
+    height: 35px;  /* Increased height */
+    line-height: 1;
+    transition: all 0.3s ease;
+    flex: 1;  /* Make buttons take equal space */
+}
+
+.slider button.active {
+    background-color: #fff;
+    color: #007bff;
+}
+
+/* Add these media queries at the end of your existing CSS file */
+
+@media screen and (max-width: 1200px) {
+    .mainContainer img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .loginForm {
+        width: 75%;
+        padding: 60px;
+    }
+
+    .slider {
+        width: 250px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        width: 90%;
+        padding: 0 30px;
+    }
+
+    .mainContainer {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        gap: 30px;
+    }
+
+    .mainContainer img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .loginForm {
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+
+    .slider {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .inputFeilds {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .btn {
+        min-width: 100px;
+        padding: 8px 20px;
+    }
+
+    .mainContainer img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .loginForm {
+        padding: 40px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav {
+        display: none;
+    }
+
+    .slider {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .mainContainer img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .login {
+        margin-right: 0;
+    }
+
+    .btn {
+        min-width: 80px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+
+
